@@ -1,0 +1,352 @@
+.pay-transfer-layout {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.pay-transfer-content {
+  background: #f5f5f5;
+  padding: 24px;
+  min-height: calc(100vh - 180px);
+  display: flex;
+  justify-content: center;
+}
+
+.pay-transfer-inner {
+  width: 85%;
+  max-width: 85%;
+  margin: 0;
+}
+
+/* Payment options 部分 */
+.payment-options-section {
+  margin-bottom: 32px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+  margin: 0;
+}
+
+.learn-more-link {
+  color: #055CB0;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.learn-more-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.payment-cards-row {
+  margin-top: 24px;
+}
+
+.payment-card {
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: white;
+  text-align: center;
+  position: relative;
+}
+
+.payment-card .ant-card-body {
+  padding: 24px 0 0 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 348px;
+}
+
+
+.payment-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.payment-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  margin: 0 0 8px 0;
+}
+
+.payment-card-desc {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 16px 0;
+}
+
+.payment-card-content {
+  padding: 0 24px 16px 24px;
+}
+
+.payment-detail-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #055CB0 !important;
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 0;
+  transition: opacity 0.3s;
+}
+
+.payment-detail-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.payment-card-divider {
+  width: 100%;
+  height: 1px;
+  background: #015FB8;
+  margin: 0;
+}
+
+.enroll-button {
+  width: 100%;
+  height: 60px;
+  background: white;
+  border: none;
+  border-top: 1px solid #015FB8;
+  color: #015FB8;
+  font-weight: 500;
+  border-radius: 0;
+  margin-top: auto;
+  box-shadow: none;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.enroll-button:hover {
+  background: #f0f4ff;
+  color: #015FB8;
+  border-top-color: #015FB8;
+}
+
+/* Wires & global transfers 特殊样式 */
+.wire-details {
+  text-align: left;
+  margin: 16px 0 0 0;
+  padding: 0;
+  background: transparent;
+}
+
+.wire-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 8px;
+}
+
+.wire-detail-item:last-child {
+  margin-bottom: 0;
+}
+
+.wire-detail-label {
+  font-size: 12px;
+  color: #666;
+}
+
+.wire-detail-value {
+  font-size: 12px;
+  color: #333;
+  font-weight: 600;
+}
+
+.wire-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 24px;
+  height: 60px;
+  box-sizing: border-box;
+  margin-top: auto; /* 置底 */
+  flex-shrink: 0;
+  border-top: 1px solid #055CB0;
+}
+
+.wire-button {
+  border: none;
+  color: #015FB8;
+  background: transparent;
+  height: auto;
+  font-weight: 500;
+  padding: 0;
+  box-shadow: none;
+}
+
+.wire-button:hover {
+  color: #015FB8;
+  background: transparent;
+  opacity: 0.8;
+}
+
+.button-separator {
+  color: #e0e0e0;
+  font-size: 16px;
+  margin: 0 4px;
+}
+
+/* Track your payments */
+.track-payments-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: white;
+}
+
+.track-payments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.track-payments-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.track-payments-desc {
+  font-size: 14px;
+  color: #666;
+}
+
+.status-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.payment-records-table {
+  margin-bottom: 16px;
+}
+
+.payment-records-table .ant-table-thead > tr > th {
+  background: white;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.payment-records-table .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.payment-records-table .ant-table-tbody > tr:hover > td {
+  background: #f8f9fa;
+}
+
+.view-all-link {
+  text-align: center;
+  padding-top: 16px;
+  color: #055CB0;
+  font-weight: 500;
+  border-top: 1px solid #e0e0e0;
+}
+
+.view-all-link a {
+  color: #1a237e;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.view-all-link a:hover {
+  text-decoration: underline;
+}
+
+/* Tasks */
+.tasks-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: white;
+}
+
+.tasks-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a237e;
+  margin: 0 0 16px 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  color: #055CB0;
+  border-top: 1px solid #C9C9C9;
+  border-bottom: 1px solid #C9C9C9;
+}
+
+.task-item:hover {
+  opacity: 0.8;
+}
+
+.task-arrow {
+  color: #055CB0;
+  font-size: 12px;
+}
+
+.bottom-section {
+  margin-top: 32px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .pay-transfer-inner {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .pay-transfer-content {
+    padding: 16px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .track-payments-header {
+    flex-direction: column;
+  }
+
+  .payment-cards-row .ant-col {
+    margin-bottom: 16px;
+  }
+}
+

@@ -1,0 +1,208 @@
+.security-layout {
+  min-height: 100vh;
+  background: white;
+}
+
+.security-body {
+  min-height: calc(100vh - 180px);
+  width: 83%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* 左侧导航栏 */
+.security-sidebar {
+  background: white;
+  border-right: 1px solid #e0e0e0;
+  height: calc(100vh - 180px);
+  overflow-y: auto;
+  position: relative;
+  top: auto;
+}
+
+.security-sidebar .sidebar-content {
+  padding: 24px 0;
+}
+
+.security-sidebar .sidebar-item {
+  padding: 12px 10px;
+  color: #666;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-left: 1px solid transparent;
+}
+
+.security-sidebar .sidebar-item:hover {
+  background: #f8f9fa;
+  color: #333;
+}
+
+.security-sidebar .sidebar-item.active {
+  color: #015FB8;
+  border-left-color: #015FB8;
+  font-weight: 500;
+}
+
+/* 右侧内容区域 */
+.security-content {
+  background: white;
+  padding: 20px;
+  min-height: calc(100vh - 180px);
+}
+
+.security-content-inner {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+/* 邮件详情 */
+.email-detail-card {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.email-header {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 24px;
+}
+
+.email-header-info {
+  width: 100%;
+}
+
+.email-header-row {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.email-header-row-with-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.email-header-row-with-actions > div:first-child {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1;
+}
+
+.email-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #666;
+  min-width: 120px;
+}
+
+.email-value {
+  font-size: 16px;
+  color: black;
+}
+
+.email-header-divider {
+  height: 1px;
+  background: #e0e0e0;
+  margin: 16px 0;
+}
+
+.email-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.email-action-divider {
+  width: 1px;
+  height: 16px;
+  background: #e0e0e0;
+  margin: 0 16px;
+}
+
+.email-action-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.email-action-link {
+  color: #015FB8;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.email-action-link:hover {
+  text-decoration: underline;
+}
+
+.email-body {
+  color: #333;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.email-greeting {
+  margin: 0 0 16px 0;
+  font-weight: 500;
+}
+
+.email-content {
+  margin: 0 0 16px 0;
+  color: black;
+}
+
+.email-signature {
+  margin: 24px 0 0 0;
+  font-weight: 500;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .security-content-inner {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .security-sidebar {
+    position: relative;
+    top: 0;
+    height: auto;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
+  .security-content {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .security-content {
+    padding: 16px;
+  }
+
+  .content-title {
+    font-size: 24px;
+  }
+
+  .content-header {
+    flex-direction: column;
+  }
+
+  .new-message-button {
+    width: 100%;
+  }
+}
+

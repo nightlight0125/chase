@@ -1,0 +1,320 @@
+.customer-insights-layout {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.customer-insights-content {
+  background: #f5f5f5;
+  padding: 24px;
+  min-height: calc(100vh - 180px);
+  display: flex;
+  justify-content: center;
+}
+
+.customer-insights-inner {
+  width: 85%;
+  max-width: 85%;
+  margin: 0;
+}
+
+/* Logo 和标题 */
+.insights-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.insights-logo {
+  margin-bottom: 24px;
+}
+
+.send-money-img {
+  width: 56px !important;
+  height: 56px !important;
+}
+
+.logo-circle {
+  width: 80px;
+  height: 80px;
+  background: #1a237e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 auto;
+}
+
+.insights-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: black;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* 标签页 */
+.transfer-tabs {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.transfer-tabs .ant-tabs-nav {
+  margin: 0;
+}
+
+.transfer-tabs .ant-tabs-nav-list {
+  display: flex;
+  justify-content: center;
+}
+
+.transfer-tabs .ant-tabs-tab {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 24px;
+  color: #999; /* 未选中时为灰色 */
+  width: 256px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transfer-tabs .ant-tabs-tab .ant-tabs-tab-btn {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transfer-tabs .ant-tabs-tab:hover {
+  color: #055CB0;
+}
+
+.transfer-tabs .ant-tabs-tab-active {
+  color: #055CB0 !important; /* 选中时字体颜色 */
+}
+
+.transfer-tabs .ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #055CB0 !important;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transfer-tabs .ant-tabs-ink-bar {
+  background: #055CB0 !important; /* 选中时下划线颜色 */
+}
+
+/* 信息卡片网格 */
+.info-cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 32px;
+  margin-top: 32px;
+  max-width: 790px; /* 383px * 2 + 24px gap */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-card {
+  width: calc(50% - 12px); /* 两个一行，减去一半的 gap */
+  min-height: 193px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+.info-card-content {
+  width: 80%;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-card-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.info-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  margin: 0;
+}
+
+.info-card-text {
+  font-size: 14px;
+  color: black;
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 0 0 12px 0;
+  flex: 1;
+}
+
+.info-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px 0;
+  flex: 1;
+}
+
+.info-card-list li {
+  font-size: 14px;
+  color: black;
+  line-height: 1.6;
+  padding-left: 10px;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.info-card-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #055CB0;
+  font-weight: bold;
+}
+
+.info-card-link {
+  color: #055CB0;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: opacity 0.3s;
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+.info-card-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.info-card-link span {
+  font-size: 12px;
+}
+
+/* 响应式适配 */
+@media (max-width: 1200px) {
+  .info-cards-grid {
+    gap: 20px;
+  }
+  
+  .info-card {
+    width: calc(50% - 10px);
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-cards-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .info-card {
+    width: 100%;
+    max-width: 383px;
+  }
+}
+
+/* 底部按钮 */
+.insights-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.action-button-outline {
+  height: 30px;
+  padding: 0 32px;
+  border-color: #055CB0;
+  color: #055CB0;
+  background: white;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.action-button-outline:hover {
+  border-color: #055CB0;
+  color: #055CB0;
+  background: #f0f4ff;
+  opacity: 0.9;
+}
+
+.action-button-primary {
+  height: 48px;
+  padding: 0 32px;
+  background: #055CB0;
+  border-color: #055CB0;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.action-button-primary:hover {
+  background: #044a9a;
+  border-color: #044a9a;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .customer-insights-inner {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .customer-insights-content {
+    padding: 16px;
+  }
+
+  .insights-title {
+    font-size: 24px;
+  }
+
+  .logo-circle {
+    width: 60px;
+    height: 60px;
+    font-size: 36px;
+  }
+
+  .insights-actions {
+    flex-direction: column;
+  }
+
+  .action-button-outline,
+  .action-button-primary {
+    width: 100%;
+  }
+}
+

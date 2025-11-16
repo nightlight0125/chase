@@ -1,0 +1,766 @@
+.account-detail-layout {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.account-detail-content {
+  background: #f5f5f5;
+  padding: 0;
+  min-height: calc(100vh - 180px);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.account-detail-inner {
+  width: 85%;
+  max-width: 85%;
+  margin: 0;
+  position: relative;
+}
+.breadcrumb-link {
+  color: #055CB0 !important;
+}
+.account-detail-inner-top {
+  width: 100vw;
+  background-color: #ffffff;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.account-detail-inner-top-content {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* 面包屑导航 */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.breadcrumb-separator {
+  color: #999;
+}
+
+/* 账户信息 */
+.account-header {
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+.account-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.account-company {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.balance-section {
+  margin-bottom: 32px;
+  padding: 24px;
+}
+.balance-routing-link {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  margin-top: 0;
+  cursor: pointer;
+  color: #015FB8;
+  font-size: 14px;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.balance-routing-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.balance-info-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.balance-section-flex {
+  display: flex;
+  /* gap: 24px; */
+  /* margin-bottom: 32px; */
+  width: 86%;
+  margin: 0 auto;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 20px;
+}
+.balance-amount-medium-credit {
+  line-height: 20px;
+  margin-bottom: 8px !important;
+}
+
+.balance-item-flex:has(.balance-amount-medium-credit) .balance-label {
+  margin-top: 0 !important;
+  padding-top: 0;
+}
+
+.balance-item-flex {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.balance-section .ant-row {
+  display: flex;
+  align-items: flex-end;
+}
+
+.balance-item {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 80px;
+}
+
+.balance-amount {
+  font-size: 48px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.balance-amount-medium {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.balance-amount-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.balance-amount-row .balance-amount {
+  margin-bottom: 0;
+}
+
+.balance-label {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: auto;
+  line-height: 1.4;
+}
+
+.routing-link {
+  color: #015FB8;
+  font-size: 12px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 4px;
+  transition: opacity 0.3s;
+}
+
+.routing-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* 操作按钮 */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  width: 86%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.detail-action-button {
+  height: 30px;
+  border-radius: 4px;
+  font-weight: 500;
+  border-color: #015FB8;
+  color: #015FB8;
+  background: white;
+}
+
+.detail-action-button:hover {
+  border-color: #283593;
+  color: #283593;
+  background: #f5f5f5;
+}
+
+/* Uncollected funds */
+.uncollected-funds-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.uncollected-funds {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: 80%;
+}
+
+.uncollected-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.uncollected-total {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a237e;
+}
+
+/* 推广和优惠卡片行 */
+.promo-offers-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+}
+
+.promo-offers-row {
+  margin-bottom: 24px;
+  width: 82%;
+}
+
+/* 推广卡片 */
+.promo-card-detail {
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: white;
+}
+
+.promo-content-detail {
+  color: #333;
+}
+
+.promo-title-detail {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.promo-text-detail {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.promo-details-detail {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.promo-link-detail {
+  color: #055CB0;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: opacity 0.3s;
+}
+
+.promo-link-detail:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Chase Offers 卡片 */
+.chase-offers-card {
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: white;
+}
+
+.chase-offers-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.chase-offers-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a237e;
+  margin: 0 0 4px 0;
+}
+
+.chase-offers-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.card-header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.offers-badge {
+  margin: 0;
+}
+
+.offers-badge .ant-badge-count {
+  background: #1a237e;
+}
+
+.card-icon {
+  font-size: 18px;
+  color: #015FB8;
+  cursor: pointer;
+}
+
+/* 优惠轮播 */
+.offers-carousel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  position: relative;
+  width: 100%;
+}
+
+.carousel-arrow-left {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: all 0.3s;
+  flex-shrink: 0;
+  object-fit: contain;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.carousel-arrow-right {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: all 0.3s;
+  flex-shrink: 0;
+  object-fit: contain;
+  background: transparent;
+  border: none;
+}
+
+.carousel-arrow-left:hover {
+  background: #e8e8e8;
+  border-color: #ccc;
+}
+
+.offers-carousel-content {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+  overflow: visible;
+  align-items: stretch;
+}
+
+/* 优惠卡片 */
+.offer-card {
+  width: calc(50% - 6px);
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 12px;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  height: auto;
+  min-height: auto;
+}
+
+.offer-card-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.offer-icon-placeholder {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.offer-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.offer-merchant {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.offer-cashback {
+  font-size: 11px;
+  color: #666;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.offer-card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.offer-new-badge {
+  background: #006F21;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.offer-add-button {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.offer-add-button:hover {
+  transform: scale(1.1);
+}
+
+.offer-cashback {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+/* 交易列表 */
+.transactions-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.transactions-section {
+  margin-top: 32px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+}
+
+.transactions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.transactions-title {
+  width: 80%;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 auto;
+}
+
+.transactions-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.transactions-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.transactions-select {
+  flex: 1;
+}
+
+.transactions-select .ant-select-selector {
+  width: 100% !important;
+}
+
+.filter-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.transactions-actions {
+  display: flex;
+  align-items: center;
+}
+
+.filter-icon,
+.search-icon,
+.print-icon,
+.download-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  object-fit: contain;
+}
+
+.filter-icon:hover,
+.search-icon:hover,
+.print-icon:hover,
+.download-icon:hover {
+  opacity: 0.7;
+}
+
+.transactions-table {
+  margin-bottom: 24px;
+}
+
+.transactions-table .ant-table-thead > tr > th {
+  background: white;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.transactions-table .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 16px;
+}
+
+.transactions-table .ant-table-tbody > tr:hover > td {
+  background: #f8f9fa;
+}
+
+.balance-value {
+  color: #055CB0;
+}
+
+.transaction-link {
+  color: #1a237e;
+  text-decoration: none;
+}
+
+.transaction-link:hover {
+  text-decoration: underline;
+}
+
+.amount-negative {
+  color: #333;
+  font-weight: 500;
+}
+
+.amount-positive {
+  color: #4caf50;
+  font-weight: 500;
+}
+
+.transactions-footer {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #666;
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.footer-link {
+  color: #055CB0;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* 账户和路由号码模态框 */
+.routing-modal .ant-modal-header {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.routing-modal .ant-modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.routing-modal-content {
+  padding: 8px 0;
+}
+
+.routing-info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.routing-info-item:last-of-type {
+  border-bottom: none;
+}
+
+.routing-label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.routing-value-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.routing-value {
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+  margin-left: 50px;
+}
+
+.routing-print-icon {
+  font-size: 18px;
+  color: #015FB8;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.routing-print-icon:hover {
+  color: #1a237e;
+}
+
+.routing-note {
+  font-size: 14px;
+  color: black;
+  margin: 0;
+}
+
+.modal-close-button {
+  background: #015FB8;
+  border-color: #015FB8;
+  padding: 0 30px;
+  font-weight: 500;
+}
+
+.modal-close-button:hover {
+  background: #283593;
+  border-color: #283593;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .account-detail-inner {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .account-detail-content {
+    padding: 16px;
+  }
+
+  .account-title {
+    font-size: 24px;
+  }
+
+  .balance-section {
+    padding: 16px;
+  }
+
+  .balance-amount {
+    font-size: 24px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .detail-action-button {
+    width: 100%;
+  }
+}
+

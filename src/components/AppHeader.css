@@ -1,0 +1,552 @@
+.app-header-container {
+  width: 100%;
+}
+
+.header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-top-inner {
+  width: 85%; 
+  max-width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu-icon {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.menu-icon:hover {
+  opacity: 0.8;
+}
+
+.logo {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin-left: 5px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-icon {
+  color: #A5C1E7;
+  font-size: 20px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.header-icon:hover {
+  opacity: 0.8;
+}
+
+.open-account-btn {
+  background: white;
+  font-weight: 500;
+  height: 36px;
+  padding: 0 20px;
+  color: black;
+  font-size: 14px;
+  
+}
+
+.open-account-btn:hover {
+  background: #1565c0;
+  border-color: #1565c0;
+}
+
+.sign-out-link {
+  color: #A5C1E7;
+  text-decoration: none;
+  font-size: 14px;
+  transition: opacity 0.3s;
+}
+
+.sign-out-link:hover {
+  opacity: 0.8;
+  color: white;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.header-nav-inner {
+  width: 85%;
+  max-width: 85%;
+}
+
+.nav-menu {
+  background: transparent;
+  border-bottom: none;
+  color: white;
+}
+
+.nav-menu .ant-menu-item {
+  color: rgba(255, 255, 255, 0.85);
+  border-bottom: 2px solid transparent;
+  padding: 0 20px;
+  margin: 0 4px;
+  height: 48px;
+  line-height: 48px;
+}
+
+.nav-menu .ant-menu-item:hover {
+  color: white !important;
+  border-bottom-color: transparent;
+}
+
+.nav-menu .ant-menu-item-selected {
+  color: white !important;
+  border-bottom-color: transparent;
+  background: transparent;
+}
+
+.nav-menu .ant-menu-item-selected:hover {
+  color: white !important;
+}
+
+.nav-menu .ant-menu-item::after {
+  display: none;
+}
+
+/* 二级菜单 - 气泡菜单 */
+.sub-menu-container {
+  background: #ffffff;
+  position: relative;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sub-menu-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #1a237e;
+  z-index: 1;
+}
+
+.sub-menu-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 16px 24px 12px 24px;
+}
+
+.sub-menu {
+  display: flex;
+  gap: 8px;
+  width: 85%;
+  max-width: 85%;
+  position: relative;
+}
+
+.sub-menu-item {
+  padding: 8px 16px;
+  cursor: pointer;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  transition: all 0.3s;
+  white-space: nowrap;
+  position: relative;
+}
+
+.sub-menu-item:hover {
+  color: #1a237e;
+}
+
+.sub-menu-item.active {
+  color: #055CB0;
+  background: #E8EEF5;
+  border: 1px solid #055CB0;
+  font-weight: 500;
+  position: relative;
+  border-radius: 8px;
+}
+
+/* 向下指向的白色三角形指示器 - 从顶部菜单项指向二级菜单 */
+.sub-menu-indicator {
+  position: absolute;
+  top: -8px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #ffffff;
+  z-index: 2;
+  transition: left 0.3s ease;
+  transform: translateX(-50%);
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+  .header-top {
+    padding: 12px 16px;
+  }
+
+
+  .nav-menu .ant-menu-item {
+    padding: 0 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-right .ant-space-item:nth-child(1),
+  .header-right .ant-space-item:nth-child(2),
+  .header-right .ant-space-item:nth-child(3) {
+    display: none;
+  }
+
+  .open-account-btn {
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+  .nav-menu {
+    overflow-x: auto;
+  }
+
+  .nav-menu .ant-menu-item {
+    padding: 0 8px;
+    font-size: 12px;
+  }
+}
+
+/* 登录抽屉样式 */
+.login-drawer .ant-drawer-content-wrapper {
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+  background-color: #F5F6F8;
+}
+
+.login-drawer .ant-drawer-body {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-modal-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+}
+
+/* 头部 */
+.login-modal-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 20px 24px;
+}
+
+.login-modal-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.login-modal-close {
+  font-size: 18px;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.login-modal-close:hover {
+  color: #000;
+}
+
+/* 主要内容 */
+.login-modal-body {
+  width: 85%;
+  padding: 20px 24px;
+  flex: 1;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.login-welcome {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 32px;
+}
+
+.login-form-item {
+  margin-bottom: 24px;
+}
+
+.login-label {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.login-input {
+  width: 100%;
+  font-size: 16px;
+  padding: 8px 0;
+  color: #000;
+}
+
+.login-input-underline {
+  width: 100%;
+  height: 2px;
+  background: #015FB8;
+  margin-top: 4px;
+}
+
+.login-password-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login-show-password {
+  color: #015FB8;
+  font-size: 14px;
+  text-decoration: none;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+.login-show-password:hover {
+  text-decoration: underline;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  margin-top: 32px;
+}
+
+.login-remember {
+  color: #000;
+}
+
+.login-remember .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #015FB8;
+  border-color: #015FB8;
+}
+
+.login-use-token {
+  color: #015FB8;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.login-use-token:hover {
+  text-decoration: underline;
+}
+
+.login-signin-button {
+  height: 48px;
+  background: #015FB8;
+  border-color: #015FB8;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.login-signin-button:hover {
+  background: #014a9a;
+  border-color: #014a9a;
+}
+
+.login-help-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-help-link {
+  color: #015FB8;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.login-help-link:hover {
+  text-decoration: underline;
+}
+
+/* 底部 */
+.login-modal-footer {
+  padding: 16px 24px;
+}
+
+.login-close-link {
+  color: #015FB8;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.login-close-link:hover {
+  text-decoration: underline;
+}
+
+/* 菜单抽屉样式 */
+.menu-drawer .ant-drawer-content-wrapper {
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.menu-drawer .ant-drawer-body {
+  padding: 0;
+  background: #2c2c2c;
+  height: 100%;
+}
+
+.menu-drawer-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: white;
+}
+
+.menu-drawer-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-drawer-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.menu-drawer-close {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.menu-drawer-close:hover {
+  color: white;
+}
+
+.menu-drawer-main {
+  flex: 1;
+  padding: 8px 0;
+  overflow-y: auto;
+}
+.menu-drawer-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-drawer-section {
+  padding: 8px 0;
+  /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
+}
+
+.menu-drawer-section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  padding: 16px 24px 8px 24px;
+  letter-spacing: 0.5px;
+  background-color: #21201A;
+}
+
+.menu-drawer-item {
+  padding: 12px 24px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.menu-drawer-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.menu-drawer-item.active {
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.menu-drawer-item.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #015FB8;
+}
+
+.menu-drawer-item-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-drawer-item-with-icon:has(.menu-drawer-item-icon-secure-messages) {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menu-drawer-item-icon-secure-messages {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.menu-drawer-item-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.menu-drawer-info-icon {
+  margin-left: auto;
+  color: #015FB8;
+  font-size: 16px;
+}
+
