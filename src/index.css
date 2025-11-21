@@ -12,9 +12,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
+  background: white !important;
 }
 
 #root {
   width: 100%;
   min-height: 100vh;
+  background: white !important;
 }

@@ -8,6 +8,9 @@
   align-items: center;
   padding: 16px 24px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  height: 60px;
+  max-height: 60px;
+  box-sizing: border-box;
 }
 
 .header-top-inner {
@@ -165,7 +168,7 @@
 }
 
 .sub-menu-item {
-  padding: 8px 16px;
+  padding: 4px 14px;
   cursor: pointer;
   color: #666;
   font-size: 14px;
@@ -189,6 +192,55 @@
   font-weight: 500;
   position: relative;
   border-radius: 8px;
+}
+
+/* Statements 页面的标签页菜单样式 */
+.statements-tabs-container {
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.statements-tabs-container::before {
+  display: none;
+}
+
+.statements-tabs {
+  display: flex;
+  gap: 0;
+  padding: 0 24px;
+  width: 85%;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.statements-tab-item {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #999;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  background: transparent;
+  border: none;
+  transition: all 0.3s;
+}
+
+.statements-tab-item.active {
+  background: rgba(22, 137, 70, 1);
+  color: white;
+}
+
+.statements-tab-item-with-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: rgba(22, 137, 70, 1);
 }
 
 /* 向下指向的白色三角形指示器 - 从顶部菜单项指向二级菜单 */
@@ -297,7 +349,7 @@
 
 .login-welcome {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 300;
   color: #000;
   margin-bottom: 32px;
 }
@@ -382,7 +434,7 @@
   border-color: #015FB8;
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
 }
 
 .login-signin-button:hover {

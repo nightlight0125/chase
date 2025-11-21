@@ -1,27 +1,39 @@
 .security-layout {
   min-height: 100vh;
+  height: 100vh;
   background: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .security-body {
-  min-height: calc(100vh - 180px);
+  height: 100%;
   width: 83%;
   margin: 0 auto;
   position: relative;
+  display: flex;
+  flex: 1;
 }
 
 /* 左侧导航栏 */
 .security-sidebar {
   background: white;
   border-right: 1px solid #e0e0e0;
-  height: calc(100vh - 180px);
-  overflow-y: auto;
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
   position: relative;
   top: auto;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .security-sidebar .sidebar-content {
   padding: 24px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .security-sidebar .sidebar-item {
@@ -57,11 +69,172 @@
   margin: 0;
 }
 
+/* 导航容器 */
+.navigation-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* 导航栏 */
+.navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F8F6F7;
+  height: 40px;
+  padding: 0 16px;
+  width: 100%;
+}
+
+.inbox-button {
+  background: none;
+  border: none;
+  color: #015FB8;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  width: 70px;
+}
+
+.inbox-button .anticon {
+  margin-right: 0 !important;
+  font-size: 12px;
+}
+
+.inbox-button:hover {
+  opacity: 0.8;
+}
+
+.navigation-arrows {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.arrow-icon {
+  font-size: 25px;
+  color: #D2D0D3;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin: 0 -2px;
+}
+
+.arrow-icon:first-child {
+  margin-right: 2px;
+}
+
+.arrow-icon:last-child {
+  margin-left: 0px;
+}
+
 /* 邮件详情 */
 .email-detail-card {
   background: white;
   border-radius: 8px;
   padding: 24px;
+  margin-top: 20px;
+}
+
+.email-detail-container {
+  width: 100%;
+  background-color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.email-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 98%;
+  margin: 0 auto;
+}
+
+.email-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.email-greeting {
+  margin-top: 16px !important;
+}
+.email-content-text {
+line-height: 2;
+margin-bottom: 20px;
+}
+
+.email-info-row .email-label {
+  flex: 0 0 auto;
+  min-width: 60px;
+}
+
+.email-info-row .email-value {
+  flex: 1;
+}
+
+.email-info-row-with-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.email-info-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1;
+}
+
+.email-info-left .email-label {
+  flex: 0 0 auto;
+  min-width: 60px;
+}
+
+.email-info-left .email-value {
+  flex: 1;
+}
+
+.email-divider-horizontal {
+  height: 1px;
+  background: #e0e0e0;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.email-divider-vertical {
+  width: 1px;
+  background: #FF6B35;
+  margin: 0 24px;
+  align-self: stretch;
+  min-height: 100px;
+}
+
+.email-header-right {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.email-number-box {
+  background: #FF6B35;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .email-header {
@@ -114,15 +287,15 @@
 
 .email-header-actions {
   display: flex;
-  align-items: center;
-  gap: 0;
+  align-items: flex-end;
+  margin-right: 40px;
 }
 
 .email-action-divider {
   width: 1px;
   height: 16px;
   background: #e0e0e0;
-  margin: 0 16px;
+  margin: 0 10px;
 }
 
 .email-action-icon {
@@ -157,6 +330,8 @@
 .email-content {
   margin: 0 0 16px 0;
   color: black;
+  width: 98%;
+  margin: 0 auto;
 }
 
 .email-signature {

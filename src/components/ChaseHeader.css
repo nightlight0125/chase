@@ -1,0 +1,424 @@
+.chase-header-container {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+
+.chase-header-top-inner {
+  width: 85%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.chase-logo-img {
+  width: 288px;
+  height: 25px;
+}
+
+.chase-categories {
+  display: flex;
+  gap: 0;
+  padding: 10px 0;
+}
+
+.chase-category-btn {
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #333333;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.chase-category-btn:first-child {
+  padding-left: 0;
+}
+
+.chase-category-btn:hover {
+  color: #0b6ef7;
+}
+
+
+.chase-category-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  height: 4px;
+  background-color: #0b6ef7;
+  font-weight: 500;
+}
+
+.chase-category-btn:first-child.active::after {
+  left: 0;
+  transform: none;
+  width: calc(100% - 16px);
+}
+
+.chase-header-main {
+  padding: 10px 0;
+}
+
+.chase-header-main-inner {
+  width: 85%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chase-header-left {
+  display: flex;
+  align-items: center;
+}
+
+.chase-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chase-logo-text {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.chase-logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chase-logo-icon svg {
+  width: 24px;
+  height: 28px;
+}
+
+.chase-header-right {
+  display: flex;
+  align-items: center;
+}
+
+.chase-sign-in-btn {
+  background-color: #005eb8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  width: 77px;
+  height: 36px;
+}
+
+.chase-sign-in-btn:hover {
+  background-color: #041e42;
+}
+
+.chase-utility-links {
+  display: flex;
+  align-items: center;
+}
+
+.chase-utility-link {
+  color: #333333;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.chase-utility-link:hover {
+  color: #0066cc;
+}
+
+.chase-utility-link-dropdown {
+  cursor: pointer;
+}
+
+.chase-dropdown-icon {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.chase-search-icon {
+  font-size: 18px;
+  color: #333333;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.chase-search-icon:hover {
+  color: #0066cc;
+}
+
+.chase-nav-bar {
+  background-color: #ffffff;
+}
+
+.chase-nav-bar-inner {
+  width: 85%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  overflow-x: auto;
+}
+
+.chase-nav-item {
+  color: #333333;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 15px 0;
+  white-space: nowrap;
+  transition: color 0.2s;
+  position: relative;
+  margin-bottom: 10px
+}
+
+.chase-nav-item:hover {
+  color: #0066cc;
+}
+
+.chase-nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #0066cc;
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+
+.chase-nav-item:hover::after {
+  transform: scaleX(1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .chase-header-main-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .chase-header-right {
+    width: 100%;
+  }
+
+  .chase-utility-links {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .chase-nav-bar-inner {
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .chase-nav-item {
+    font-size: 13px;
+  }
+}
+
+/* 登录抽屉样式 */
+.login-drawer .ant-drawer-content-wrapper {
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+  background-color: #F5F6F8;
+}
+
+.login-drawer .ant-drawer-body {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-modal-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+}
+
+/* 头部 */
+.login-modal-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 20px 24px;
+}
+
+.login-modal-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.login-modal-close {
+  font-size: 18px;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.login-modal-close:hover {
+  color: #000;
+}
+
+/* 主要内容 */
+.login-modal-body {
+  width: 85%;
+  padding: 20px 24px;
+  flex: 1;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.login-welcome {
+  font-size: 28px;
+  font-weight: 300;
+  color: #000;
+  margin-bottom: 32px;
+}
+
+.login-form-item {
+  margin-bottom: 24px;
+}
+
+.login-label {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.login-input {
+  width: 100%;
+  font-size: 16px;
+  padding: 8px 0;
+  color: #000;
+}
+
+.login-input-underline {
+  width: 100%;
+  height: 2px;
+  background: #015FB8;
+  margin-top: 4px;
+}
+
+.login-password-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login-show-password {
+  color: #015FB8;
+  font-size: 14px;
+  text-decoration: none;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+.login-show-password:hover {
+  text-decoration: underline;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  margin-top: 32px;
+}
+
+.login-remember {
+  color: #000;
+}
+
+.login-remember .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #015FB8;
+  border-color: #015FB8;
+}
+
+.login-use-token {
+  color: #015FB8;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.login-use-token:hover {
+  text-decoration: underline;
+}
+
+.login-signin-button {
+  height: 48px;
+  background: #015FB8;
+  border-color: #015FB8;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.login-signin-button:hover {
+  background: #014a9a;
+  border-color: #014a9a;
+}
+
+.login-help-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-help-link {
+  color: #015FB8;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.login-help-link:hover {
+  text-decoration: underline;
+}
+
+/* 底部 */
+.login-modal-footer {
+  padding: 16px 24px;
+}
+
+.login-close-link {
+  color: #015FB8;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.login-close-link:hover {
+  text-decoration: underline;
+}

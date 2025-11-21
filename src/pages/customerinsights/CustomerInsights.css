@@ -5,31 +5,32 @@
 
 .customer-insights-content {
   background: #f5f5f5;
-  padding: 24px;
   min-height: calc(100vh - 180px);
   display: flex;
   justify-content: center;
 }
 
 .customer-insights-inner {
-  width: 85%;
-  max-width: 85%;
+  width: 83%;
+  max-width: 83%;
   margin: 0;
+  background: white;
 }
 
 /* Logo 和标题 */
 .insights-header {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 5px;
 }
 
 .insights-logo {
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 
 .send-money-img {
-  width: 56px !important;
-  height: 56px !important;
+  width: 70px !important;
+  height: 64px !important;
+  margin-top: 30px;
 }
 
 .logo-circle {
@@ -50,19 +51,20 @@
   font-size: 22px;
   font-weight: 600;
   color: black;
-  margin: 0;
-  line-height: 1.4;
 }
 
 /* 标签页 */
 .transfer-tabs {
-  margin-bottom: 32px;
   display: flex;
   justify-content: center;
 }
 
 .transfer-tabs .ant-tabs-nav {
   margin: 0;
+}
+
+.transfer-tabs .ant-tabs-nav::before {
+  display: none !important;
 }
 
 .transfer-tabs .ant-tabs-nav-list {
@@ -125,12 +127,12 @@
 }
 
 .info-card {
-  width: calc(50% - 12px); /* 两个一行，减去一半的 gap */
+  width: calc(42% - 12px); /* 两个一行，减去一半的 gap */
   min-height: 193px;
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 24px;
+  padding: 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -140,11 +142,11 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   flex-shrink: 0;
 }
 .info-card-content {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   flex: 1;
   display: flex;
@@ -152,8 +154,8 @@
 }
 
 .info-card-icon {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 18px;
   flex-shrink: 0;
 }
 
@@ -176,14 +178,14 @@
 .info-card-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 12px 0;
+  margin: 0 0 6px 0;
   flex: 1;
 }
 
 .info-card-list li {
   font-size: 14px;
   color: black;
-  line-height: 1.6;
+  line-height: 1.4;
   padding-left: 10px;
   position: relative;
   margin-bottom: 4px;
@@ -250,6 +252,7 @@
   justify-content: center;
   gap: 16px;
   margin-top: 32px;
+  padding-bottom: 32px !important;
 }
 
 .action-button-outline {
@@ -273,8 +276,7 @@
 .action-button-primary {
   height: 48px;
   padding: 0 32px;
-  background: #055CB0;
-  border-color: #055CB0;
+  background: #012957;
   font-weight: 500;
   font-size: 16px;
   border-radius: 4px;

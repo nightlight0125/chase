@@ -20,6 +20,9 @@
   background: #1a237e;
   z-index: 1;
 }
+.routing-info-row {
+  margin-top: -20px !important;
+}
 
 .secondary-nav-inner {
   max-width: 1400px;
@@ -102,6 +105,90 @@
   overflow: visible;
 }
 
+.pending-approvals-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 16px 0px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  height:20px;
+}
+
+.external-accounts-wrapper {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.external-accounts-header {
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: white;
+  padding: 0;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.external-accounts-header-inner {
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.external-accounts-title {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+.external-accounts-icon-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.external-accounts-collapse-button {
+  background: none;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+
+.external-accounts-collapse-button:hover {
+  opacity: 0.7;
+}
+
+.external-accounts-content {
+  padding: 24px;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out, padding 0.3s ease-out;
+  max-height: 500px;
+  opacity: 1;
+  visibility: visible;
+  overflow: hidden;
+}
+
+.external-accounts-content.collapsed {
+  max-height: 0;
+  opacity: 0;
+  padding: 0 24px;
+  visibility: hidden;
+}
 .account-card .ant-card-body {
   overflow: visible;
 }
@@ -109,8 +196,8 @@
 .card-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .account-card.collapsed .card-header {
@@ -122,6 +209,10 @@
   font-weight: 600;
   margin: 0;
 }
+.external-accounts-card-title {
+  border-bottom: 1px solid #e0e0e0;
+  width: 100%;
+}
 
 .card-header-actions {
   display: flex;
@@ -130,10 +221,10 @@
 }
 
 .card-icon {
-  font-size: 16px;
-  color: #015FB8;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
   cursor: pointer;
-  transition: color 0.3s;
 }
 
 .card-icon:hover {
@@ -164,7 +255,6 @@
 
 .card-content {
   overflow: visible;
-  transition: max-height 0.3s ease-out, opacity 0.3s ease-out, margin 0.3s ease-out, padding 0.3s ease-out;
   max-height: 2000px;
   opacity: 1;
   visibility: visible;
@@ -265,6 +355,8 @@
   margin-top: auto;
 }
 
+
+
 .balance-amount {
   font-size: 48px;
   font-weight: 600;
@@ -273,6 +365,47 @@
   font-size: 24px;
   font-weight: 600;
   margin-top: 50px !important;
+}
+
+.balance-section-flex {
+  display: flex;
+  width: calc(100% + 48px) !important;
+  margin-left: -24px !important;
+  margin-right: -24px !important;
+  margin-bottom: -30px !important;
+  border-bottom: none !important;
+  padding-bottom: 0;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  box-sizing: border-box;
+  max-width: none !important;
+}
+
+.balance-item-flex {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.balance-amount-medium {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.balance-amount-medium-credit {
+  line-height: 20px;
+  margin-bottom: 8px !important;
+}
+
+.balance-item-flex:has(.balance-amount-medium-credit) .balance-label {
+  margin-top: 0 !important;
+  padding-top: 0;
 }
 
 
@@ -300,12 +433,7 @@
 }
 
 .action-button.ant-btn-primary {
-  background: #015FB8;
-}
-
-.action-button.ant-btn-primary:hover {
-  background: #283593;
-  border-color: #283593;
+  background: #16305a;
 }
 
 .card-description {
@@ -319,7 +447,7 @@
   color: #666;
   font-size: 14px;
   line-height: 1.6;
-  margin-bottom: 16px;
+  margin-top: 18px !important;
 }
 
 .link-button-wrapper {
@@ -345,21 +473,48 @@
   color: #333;
 }
 
+.promo-card-large .ant-card-body {
+  padding: 24px;
+}
+
+.promo-card-wrapper {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.promo-image-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo-image {
+  width: 88px;
+  height: 58px;
+  object-fit: contain;
+}
+
 .promo-content {
+  flex: 8;
   color: #333;
+  display: flex;
+  flex-direction: column;
 }
 
 .promo-title {
   font-size: 16px;
   font-weight: 700;
-  color: #333;
+  color: #666 !important;
   margin-bottom: 12px;
+  line-height: 1.4;
 }
 
 .promo-text {
-  font-size: 16px;
-  font-weight: 600;
-  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
   margin-bottom: 12px;
 }
 
@@ -367,7 +522,7 @@
   font-size: 14px;
   line-height: 1.6;
   color: #666;
-  margin-bottom: 16px;
+  margin-bottom: 5px;
 }
 
 .promo-link {
@@ -399,6 +554,7 @@
   gap: 12px;
   cursor: pointer;
   transition: opacity 0.3s;
+  margin-top: 18px;
 }
 
 .sidebar-card-content:hover {
@@ -428,10 +584,16 @@
   font-size: 16px;
   font-weight: 600;
   margin: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 24px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .card-header .sidebar-title {
   margin: 0;
+  line-height: 24px;
 }
 
 /* 产品网格 */
@@ -472,8 +634,8 @@
 }
 
 .product-icon-wrapper .sidebar-icon {
-  width: 48px !important;
-  height: 48px !important;
+  width: 44px !important;
+  height: 44px !important;
   border-radius: 0;
   object-fit: contain;
   display: block;
@@ -502,19 +664,37 @@
 
 /* Chase Offers */
 .card-header-right {
-  display: flex;
-  align-items: center;
-  gap: 4px;
+  margin-top: 0px !important;
 }
 
 .offers-badge {
   margin: 0;
+  width: 31px;
+  height: 19px;
+  font-size: 12px;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(1, 95, 184, 1) !important;
+  border: none !important;
+  color: white !important;
+  border-radius: 4px;
+  min-width: 31px;
+  vertical-align: middle;
+  line-height: 19px;
 }
 
-.offers-badge .ant-badge-count {
-  background: #015FB8 !important;
-  color: white;
-  border-color: #015FB8 !important;
+.offers-badge:hover {
+  background: #014a9a !important;
+}
+
+.offers-badge > span {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100%;
+  height: 100%;
 }
 
 
