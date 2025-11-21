@@ -14,8 +14,8 @@
 }
 
 .account-detail-inner {
-  width: 70%;
-  max-width: 70%;
+  width: 76%;
+  max-width: 76%;
   margin: 0;
   position: relative;
 }
@@ -194,11 +194,11 @@
 /* 操作按钮 */
 .action-buttons {
   display: flex;
-  gap: 12px;
+  gap: 30px;
   flex-wrap: wrap;
-  width: 70%;
+  width: 76%;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .detail-action-button {
@@ -348,27 +348,33 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 16px;
+  padding: 16px 20px 0 20px;
+}
+
+.card-header-left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .chase-offers-title {
   font-size: 16px;
   font-weight: 500;
   color: black;
-  margin: 16px 20px 4px 20px;
+  margin: 0 0 4px 0;
 }
 
 .chase-offers-subtitle {
   font-size: 14px;
   color: #666;
-  margin-top: -5px;
-  margin-left: 20px;
+  margin: 0;
 }
 
 .card-header-right {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin: 16px 20px 4px 20px;
+  flex-shrink: 0;
 }
 
 .offers-badge {

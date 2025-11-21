@@ -151,7 +151,7 @@ const AccountDetail = () => {
         <div className="account-detail-inner">
           <div className="account-detail-inner-top">
             <div className="account-detail-inner-top-content">
-              <div style={{ width: "70%", margin: "0 auto" }}>
+              <div style={{ width: "76%", margin: "0 auto" }}>
                 {/* 面包屑导航 */}
                 <div className="breadcrumbs">
                   <span className="breadcrumb-link">Overview</span>
@@ -261,7 +261,7 @@ const AccountDetail = () => {
               <Col xs={24} lg={12}>
                 <div className="chase-offers-card">
                   <div className="card-header">
-                    <div>
+                    <div className="card-header-left">
                       <h3 className="chase-offers-title">Chase Offers</h3>
                       <p className="chase-offers-subtitle">
                         Add deals, shop and get cash back
