@@ -3,7 +3,8 @@ import {
   RightOutlined,
   SearchOutlined,
 } from "@ant-design/icons";
-import { Button, Input, Layout, Select, Table } from "antd";
+import { Button, ConfigProvider, Input, Layout, Select, Table } from "antd";
+import enUS from "antd/locale/en_US";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import AppHeader from "../../components/AppHeader";
@@ -321,13 +322,15 @@ const Statements = () => {
                       />
                     </div>
                   </div>
-                  <Table
-                    columns={paymentColumns}
-                    dataSource={paymentRecords}
-                    pagination={false}
-                    className="payment-tracker-table"
-                    size="small"
-                  />
+                  <ConfigProvider locale={enUS}>
+                    <Table
+                      columns={paymentColumns}
+                      dataSource={paymentRecords}
+                      pagination={false}
+                      className="payment-tracker-table"
+                      size="small"
+                    />
+                  </ConfigProvider>
                   <div className="table-footer">
                     <p className="footer-text">
                       You've reached the end of your activity.
