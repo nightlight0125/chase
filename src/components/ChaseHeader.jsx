@@ -107,7 +107,7 @@ const ChaseHeader = () => {
         placement="right"
         width={385}
         closable={false}
-        maskStyle={{ backdropFilter: "blur(4px)" }}
+        // maskStyle={{ backdropFilter: "blur(4px)" }}
         bodyStyle={{ backgroundColor: "#F5F6F8" }}
         className="login-drawer"
       >

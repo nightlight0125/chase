@@ -102,6 +102,12 @@ const AccountDetail = () => {
       title: "Description",
       dataIndex: "description",
       key: "description",
+      render: (description, record) => {
+        if (record.isLink || description === "DEPOSIT ID NUMBER 30239") {
+          return <span style={{ color: "#055CB0" }}>{description}</span>;
+        }
+        return description;
+      },
     },
     {
       title: "Type",
@@ -135,7 +141,7 @@ const AccountDetail = () => {
           }}
         >
           <span className="balance-value">${balance.toFixed(2)}</span>
-          <RightOutlined style={{ fontSize: "12px", color: "#055CB0" }} />
+          <RightOutlined style={{ fontSize: "12px" }} />
         </div>
       ),
     },
@@ -151,7 +157,7 @@ const AccountDetail = () => {
         <div className="account-detail-inner">
           <div className="account-detail-inner-top">
             <div className="account-detail-inner-top-content">
-              <div style={{ width: "76%", margin: "0 auto" }}>
+              <div style={{ width: "82%", margin: "0 auto" }}>
                 {/* 面包屑导航 */}
                 <div className="breadcrumbs">
                   <span className="breadcrumb-link">Overview</span>
@@ -196,26 +202,36 @@ const AccountDetail = () => {
                     <span>Account & routing number</span>
                   </div>
                 </div>
-              </div>
-              {/* 操作按钮 */}
-              <div className="action-buttons">
-                <Button className="detail-action-button">Statements</Button>
-                <Button className="detail-action-button">Paperless</Button>
-                <Button className="detail-action-button">Transfer money</Button>
-                <Dropdown
-                  menu={{
-                    items: [
-                      { key: "1", label: "View details" },
-                      { key: "2", label: "Edit account" },
-                      { key: "3", label: "Account settings" },
-                    ],
-                  }}
-                  trigger={["click"]}
-                >
-                  <Button className="detail-action-button">
-                    More <DownOutlined />
-                  </Button>
-                </Dropdown>
+                {/* 操作按钮 */}
+                <div className="action-buttons">
+                  <div className="action-button-item">
+                    <Button className="detail-action-button">Statements</Button>
+                  </div>
+                  <div className="action-button-item">
+                    <Button className="detail-action-button">Paperless</Button>
+                  </div>
+                  <div className="action-button-item">
+                    <Button className="detail-action-button">
+                      Transfer money
+                    </Button>
+                  </div>
+                  <div className="action-button-item action-button-last">
+                    <Dropdown
+                      menu={{
+                        items: [
+                          { key: "1", label: "View details" },
+                          { key: "2", label: "Edit account" },
+                          { key: "3", label: "Account settings" },
+                        ],
+                      }}
+                      trigger={["click"]}
+                    >
+                      <Button className="detail-action-button">
+                        More <DownOutlined />
+                      </Button>
+                    </Dropdown>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -342,7 +358,7 @@ const AccountDetail = () => {
                   <div className="transactions-filter">
                     <span className="filter-label">Showing</span>
                     <Select
-                      defaultValue="all"
+                      defaultValue="All Transactions"
                       className="transactions-select"
                       options={[]}
                     />
@@ -395,6 +411,7 @@ const AccountDetail = () => {
       <Modal
         title="Full Account and Routing Number"
         open={isRoutingModalVisible}
+        style={{ top: 300 }}
         onCancel={() => setIsRoutingModalVisible(false)}
         closable={false}
         footer={[
@@ -408,7 +425,7 @@ const AccountDetail = () => {
           </Button>,
         ]}
         className="routing-modal"
-        width={704}
+        width={800}
       >
         <div className="routing-modal-content">
           <div className="routing-info-item">

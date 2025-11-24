@@ -28,7 +28,7 @@ const AppHeader = () => {
   const [subMenuCurrent, setSubMenuCurrent] = useState("overview");
   const [statementsTab, setStatementsTab] = useState("payment-activity");
   const [indicatorPosition, setIndicatorPosition] = useState(0);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // 登录状态
+  const [isLoggedIn, setIsLoggedIn] = useState(true); // 登录状态
   const [isLoginModalVisible, setIsLoginModalVisible] = useState(false); // 登录弹框显示状态
   const [showPassword, setShowPassword] = useState(false); // 密码显示/隐藏
   const [rememberMe, setRememberMe] = useState(true); // 记住我

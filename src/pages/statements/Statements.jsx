@@ -247,7 +247,7 @@ const Statements = () => {
 
       <Layout className="statements-body">
         {/* 左侧导航栏 */}
-        <Sider width={280} className="statements-sidebar">
+        <Sider width={360} className="statements-sidebar">
           <div className="sidebar-content">
             {sidebarMenu.map((section, sectionIndex) => (
               <div

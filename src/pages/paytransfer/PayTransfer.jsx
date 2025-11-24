@@ -100,7 +100,7 @@ const PayTransfer = () => {
               {/* ACH Payment Services */}
               <Col xs={24} sm={12} lg={6}>
                 <Card className="payment-card">
-                  <div className="payment-card-content">
+                  <div className="payment-card-content payment-card-content-ach">
                     <img src={achIcon} alt="ach" className="payment-icon" />
                     <div className="payment-card-title">
                       ACH Payment Services

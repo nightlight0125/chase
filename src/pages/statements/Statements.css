@@ -1,22 +1,42 @@
 .statements-layout {
-  min-height: 100vh;
+  height: 100vh;
   background: #f5f5f5;
+  overflow: hidden;
+}
+
+.statements-layout .ant-layout {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.statements-layout .ant-layout-sider {
+  overflow: hidden !important;
+}
+
+.statements-layout .ant-layout-content {
+  overflow: hidden !important;
 }
 
 .statements-body {
-  min-height: calc(100vh - 180px);
+  height: calc(100vh - 180px);
   width: 82%;
   max-width: 82%;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
+}
+
+.statements-body .ant-layout {
+  height: 100%;
+  overflow: hidden;
 }
 
 /* 左侧导航栏 */
 .statements-sidebar {
   background: white;
   border-right: 1px solid #e0e0e0;
-  height: calc(100vh - 180px);
-  overflow-y: auto;
+  height: 100vh;
+  overflow: hidden;
   position: relative;
 }
 
@@ -46,8 +66,9 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin: 0 0 12px 0;
+  padding-top: 4px;
   padding-bottom: 8px;
-  background-color: #f5f5f5;
+  background-color: #ebe3e1;
   padding-left: 20px;
 }
 
@@ -62,7 +83,7 @@
 
 .sidebar-item:hover {
   opacity: 0.8;
-  background-color: #f5f5f5;
+  background-color: #ebe3e1;
 }
 
 .sidebar-item.active {
@@ -87,6 +108,7 @@
   padding: 24px;
   min-height: calc(100vh - 180px);
   display: flex;
+  overflow: hidden;
 }
 
 .statements-content-inner {
@@ -212,7 +234,7 @@
   overflow: hidden;
 }
 .ant-table-thead > tr > th {
-  border-bottom: 3px solid #f0f0f0 !important;
+  border-bottom: 2px solid #999 !important;
   background-color: white !important; /* 可选：设置表头背景色 */
 }
 .ant-table-thead > tr > th::before {
@@ -220,7 +242,7 @@
 }
 
 .ant-table-tbody > tr > td {
-  border-bottom: 3px solid #f0f0f0 !important;
+  border-bottom: 2px solid #999 !important;
 }
 .payment-detail-link {
   color: #1a237e;
