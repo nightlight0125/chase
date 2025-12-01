@@ -20,8 +20,8 @@
 
 .statements-body {
   height: calc(100vh - 180px);
-  width: 80%;
-  max-width: 80%;
+  width: 79%;
+  max-width: 79%;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
