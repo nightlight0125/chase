@@ -2,6 +2,7 @@
   min-height: 100vh;
   background: #f5f5f5;
   overflow-x: hidden;
+  padding-top: 108px;
 }
 
 .account-detail-content {
@@ -14,8 +15,8 @@
 }
 
 .account-detail-inner {
-  width: 76%;
-  max-width: 76%;
+  width: 80%;
+  max-width: 80%;
   margin: 0;
   position: relative;
 }
@@ -46,9 +47,8 @@
   gap: 8px;
   font-size: 14px;
   color: #666;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
   padding-bottom: 10px;
-  margin-top: -20px;
 }
 
 .breadcrumb-separator {
@@ -57,7 +57,7 @@
 
 /* 账户信息 */
 .account-header {
-  margin-top: 16px;
+  margin-top: 25px;
 }
 .account-title {
   font-size: 14px;
@@ -87,6 +87,11 @@
   transition: opacity 0.3s;
 }
 
+.balance-routing-link-centered {
+  align-self: flex-start;
+  margin-top: calc((40px + 1.4 * 12px) / 2 - 7px);
+}
+
 .balance-routing-link:hover {
   opacity: 0.8;
   text-decoration: underline;
@@ -101,10 +106,10 @@
 
 .balance-section-flex {
   display: flex;
-  width: 100%;
-  border-bottom: 1px solid #e0e0e0;
+  /* border-bottom: 2px solid #e0e0e0 !important; */
   padding-bottom: 21px;
-  margin-top: 28px;
+  margin-top: 10px;
+  width: 100% !important;
 }
 .balance-amount-medium-credit {
   line-height: 20px;
@@ -198,7 +203,7 @@
   flex-wrap: nowrap;
   width: 68%;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .action-button-item {
@@ -224,7 +229,7 @@
 .detail-action-button:hover {
   border-color: #283593;
   color: #283593;
-  background: #f5f5f5;
+  background: #eee;
 }
 
 /* Uncollected funds */
@@ -243,7 +248,7 @@
   padding: 16px 24px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  width: 80%;
+  width: 70%;
   height:20px;
 }
 
@@ -264,13 +269,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  margin: 0;
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .promo-offers-row {
   margin-bottom: 24px;
-  width: 82%;
+  width: 80%;
 }
 
 /* 推广卡片 */
@@ -444,13 +450,13 @@
 }
 
 .carousel-arrow-left {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }
 
 .carousel-arrow-right {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   transition: all 0.3s;
   flex-shrink: 0;
@@ -465,16 +471,19 @@
 }
 
 .offers-carousel-content {
+  /* 两个优惠卡片占满一整行 */
   display: flex;
-  gap: 5px;
+  gap: 16px;
   flex: 1;
   overflow: visible;
   align-items: stretch;
+  justify-content: space-between;
 }
 
 /* 优惠卡片 */
 .offer-card {
-  /* width: 190px; */
+  /* 两个卡片时，各占一半宽度（减去一半间距），在一行中铺满 */
+  flex: 0 0 calc(50% - 8px);
   height: 70px !important;
   background: white;
   border: 1px solid #e0e0e0;
@@ -572,7 +581,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   margin-top: -10px;
 }
@@ -594,7 +603,7 @@
 }
 
 .transactions-title {
-  width: 80%;
+  width: 70%;
   font-size: 16px;
   font-weight: 600;
   margin: 0 auto;
@@ -651,7 +660,7 @@
 }
 
 .transactions-table {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .transactions-table .ant-table-thead > tr > th {
@@ -695,7 +704,6 @@
 }
 
 .transactions-footer {
-  margin-top: 10px;
   text-align: center;
 }
 
@@ -721,9 +729,6 @@
   color: rgba(0, 0, 0, 1);
 }
 
-.routing-modal-content {
-  padding: 8px 0;
-}
 
 .routing-info-item {
   display: flex;
@@ -773,7 +778,7 @@
 }
 
 .modal-close-button {
-  background: rgb(1, 95, 184);
+  background: #005ebb;
   padding: 0 30px;
   font-weight: 500;
   width: 128px;

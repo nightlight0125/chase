@@ -17,6 +17,7 @@ import businessSnapshotImg from "../../img/a2.png";
 import offerImg1 from "../../img/Rectangle 312.png";
 import offerImg2 from "../../img/Rectangle 313.png";
 import offerImg3 from "../../img/Rectangle 314.png";
+import rectangleImg from "../../img/Rectangle 326@2x.png";
 import "./Accounts.css";
 
 const { Header, Content } = Layout;
@@ -99,7 +100,7 @@ const Accounts = () => {
       </Header>
       <Content className="accounts-content">
         <div className="accounts-content-inner">
-          {/* <h1 className="greeting">Good afternoon</h1> */}
+          <h1 className="greeting">Good afternoon</h1>
           <Row gutter={[24, 24]}>
             <Col xs={24} lg={16}>
               <Card
@@ -143,7 +144,7 @@ const Accounts = () => {
                       style={{ cursor: "pointer" }}
                     >
                       <span>PLAT BUS CHECKING (...6189)</span>
-                      <RightOutlined className="arrow-icon" />
+                      <RightOutlined className=" arrow-icon-account" />
                     </div>
                     <div className="card-actions">
                       <Button
@@ -240,7 +241,7 @@ const Accounts = () => {
               </div>
 
               {/* Sapphire Reserve 推广卡片 */}
-              {/* <Card className="account-card promo-card-large">
+              <Card className="account-card promo-card-large">
                 <div className="promo-card-wrapper">
                   <div className="promo-image-wrapper">
                     <img
@@ -263,7 +264,7 @@ const Accounts = () => {
                     </a>
                   </div>
                 </div>
-              </Card> */}
+              </Card>
             </Col>
 
             {/* 右列 - 侧边栏 */}

@@ -38,12 +38,17 @@ const Security = () => {
           justifyContent: "center",
           alignItems: "center",
           position: "relative",
-          width: "83%",
+          width: "79%",
           margin: "0 auto",
         }}
       >
         <div
-          style={{ fontSize: "20px", fontWeight: "500", textAlign: "center" }}
+          style={{
+            fontSize: "24px",
+            fontWeight: "500",
+            textAlign: "center",
+            color: "#7593B8",
+          }}
         >
           Secure Messages
         </div>

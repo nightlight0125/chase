@@ -105,7 +105,7 @@ const ChaseHeader = () => {
         open={isLoginModalVisible}
         onClose={() => setIsLoginModalVisible(false)}
         placement="right"
-        width={385}
+        width="22vw"
         closable={false}
         // maskStyle={{ backdropFilter: "blur(4px)" }}
         bodyStyle={{ backgroundColor: "#F5F6F8" }}
@@ -120,7 +120,7 @@ const ChaseHeader = () => {
             />
           </div>
           <h2
-            style={{ marginLeft: "24px", fontWeight: "500", fontSize: "18px" }}
+            style={{ marginLeft: "24px", fontWeight: "500", fontSize: "22px" }}
           >
             Manage your business accounts
           </h2>
@@ -128,7 +128,6 @@ const ChaseHeader = () => {
           {/* 主要内容 */}
           <div className="login-modal-body">
             <h2 className="login-welcome">Welcome back</h2>
-
             {/* Username 输入 */}
             <div className="login-form-item">
               <label className="login-label">Username</label>
@@ -200,10 +199,12 @@ const ChaseHeader = () => {
             {/* 帮助链接 */}
             <div className="login-help-links">
               <a href="#" className="login-help-link">
-                Forgot username/password? <RightOutlined />
+                Forgot username/password?{" "}
+                <RightOutlined style={{ fontSize: "12px" }} />
               </a>
               <a href="#" className="login-help-link">
-                Not Enrolled? Sign Up Now. <RightOutlined />
+                Not Enrolled? Sign Up Now.{" "}
+                <RightOutlined style={{ fontSize: "12px" }} />
               </a>
             </div>
           </div>

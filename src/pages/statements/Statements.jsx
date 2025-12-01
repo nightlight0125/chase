@@ -248,7 +248,7 @@ const Statements = () => {
 
       <Layout className="statements-body">
         {/* 左侧导航栏 */}
-        <Sider width={360} className="statements-sidebar">
+        <Sider width={340} className="statements-sidebar">
           <div className="sidebar-content">
             {sidebarMenu.map((section, sectionIndex) => (
               <div
@@ -290,7 +290,7 @@ const Statements = () => {
                     </div>
                   </div>
                   {/* 过滤部分 */}
-                  <div className="filter-card">
+                  <div className="filter-card filter-card-payment-tracker">
                     <div className="filter-section">
                       <span className="filter-label">Filter by</span>
                       <Input
@@ -328,7 +328,6 @@ const Statements = () => {
                       dataSource={paymentRecords}
                       pagination={false}
                       className="payment-tracker-table"
-                      size="small"
                     />
                   </ConfigProvider>
                   <div className="table-footer">

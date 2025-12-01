@@ -29,20 +29,6 @@ const PayTransfer = () => {
       status: "Completed",
       amount: 55.0,
     },
-    {
-      key: "3",
-      recipient: "ALPHAWAVE TRADING GLOBAL INC (-3444) Wires",
-      sendOn: "Nov 3, 2025",
-      status: "Completed",
-      amount: 55.0,
-    },
-    {
-      key: "4",
-      recipient: "ALPHAWAVE TRADING GLOBAL INC",
-      sendOn: "Nov 3, 2025",
-      status: "Completed",
-      amount: 55.0,
-    },
   ];
 
   // 支付记录表格列
@@ -220,7 +206,7 @@ const PayTransfer = () => {
                     <span className="filter-label">Status</span>
                     <Select
                       defaultValue="all"
-                      style={{ width: 120 }}
+                      style={{ width: 200 }}
                       options={[
                         { value: "all", label: "All" },
                         { value: "completed", label: "Completed" },

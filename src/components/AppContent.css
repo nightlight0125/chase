@@ -12,20 +12,24 @@
   background-color: #041e42;
 }
 .app-content-inner-content {
-  /* width: 85%; */
   margin: 0 auto;
-  width: 1300px;
-  padding-top: 50px;
+  width: 100%;
+  max-width: 1360px;
+  padding: 50px 24px 0;
+  box-sizing: border-box;
   display: flex;
+  gap: 32px;
 }
 .app-content-inner-content-img {
-  width: 600px;
-  /* width: 100%;
-  height: 100%; */
-  height: 780px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .app-content-inner-content-left {
   flex: 1;
+  display: flex;
+  align-items: stretch;
 }
 .app-content-inner-content-right{
   flex: 1;
@@ -49,8 +53,9 @@
   padding-left: 12px;
 }
 .app-content-inner-content-right-text-title {
-  font-size: 36px;
+  font-size:42px !important;
   color: white;
+  
 }
 .app-content-inner-content-right-text-description {
   font-size: 16px;
@@ -81,4 +86,56 @@
 }
 .content-bottom-button:hover {
   background-color: #041e42;
+}
+
+/* 大屏幕到中等屏幕，保持左右布局 */
+@media (max-width: 1440px) {
+}
+
+/* 平板等中等屏幕，稍微压缩间距与字体 */
+@media (max-width: 1024px) {
+  .app-content-inner-content {
+    gap: 24px;
+  }
+
+  .app-content-inner-content-right-text-title {
+    font-size: 32px !important;
+  }
+}
+
+/* 小屏幕：改为上下布局，保证图片和文案都能完整显示 */
+@media (max-width: 768px) {
+  .app-content-inner {
+    height: auto;
+  }
+
+  .app-content-inner-content {
+    flex-direction: column;
+    padding: 32px 16px 24px;
+  }
+
+  .app-content-inner-content-left,
+  .app-content-inner-content-right {
+    flex: none;
+    width: 100%;
+  }
+
+  .app-content-inner-content-left {
+    display: block;
+  }
+
+  .app-content-inner-content-img {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .app-content-inner-content-right-bottom {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .app-content-inner-content-left-bottom-item,
+  .app-content-inner-content-right-bottom-item {
+    padding: 0;
+  }
 }

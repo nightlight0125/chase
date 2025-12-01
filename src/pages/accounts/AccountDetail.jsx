@@ -113,15 +113,22 @@ const AccountDetail = () => {
       title: "Type",
       dataIndex: "type",
       key: "type",
-      width: 180,
+      width: 140,
     },
     {
       title: "Amount",
       dataIndex: "amount",
       key: "amount",
       width: 120,
-      render: (amount) => (
-        <span>
+      render: (amount, record) => (
+        <span
+          style={{
+            color:
+              record.isLink || record.description === "DEPOSIT ID NUMBER 30239"
+                ? "#055CB0"
+                : "inherit",
+          }}
+        >
           {amount < 0 ? "-" : "+"}${Math.abs(amount).toFixed(2)}
         </span>
       ),
@@ -157,7 +164,7 @@ const AccountDetail = () => {
         <div className="account-detail-inner">
           <div className="account-detail-inner-top">
             <div className="account-detail-inner-top-content">
-              <div style={{ width: "82%", margin: "0 auto" }}>
+              <div style={{ width: "70%", margin: "0 auto" }}>
                 {/* 面包屑导航 */}
                 <div className="breadcrumbs">
                   <span className="breadcrumb-link">Overview</span>
@@ -170,9 +177,45 @@ const AccountDetail = () => {
                   <p className="account-company">AVESTRO GLOBAL INC</p>
                 </div>
                 {/* 余额信息 */}
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "flex-start",
+                    marginTop: "20px",
+                  }}
+                >
+                  <div>
+                    <div style={{ fontSize: "40px", fontWeight: "600" }}>
+                      $85.00
+                    </div>
+                    <div
+                      className="balance-label"
+                      style={{ fontWeight: "500" }}
+                    >
+                      Available balance
+                    </div>
+                  </div>
+                  <div
+                    className="balance-routing-link balance-routing-link-centered"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIsRoutingModalVisible(true);
+                    }}
+                  >
+                    <img
+                      src={infoIcon}
+                      alt="info"
+                      className="balance-info-icon"
+                    />
+                    <span>Account & routing number</span>
+                  </div>
+                </div>
                 <div className="balance-section-flex">
                   <div className="balance-item-flex">
-                    <div className="balance-amount">$85.00</div>
+                    <div className="balance-amount-medium balance-amount-medium-credit">
+                      $85.00
+                    </div>
                     <div className="balance-label">Available balance</div>
                   </div>
                   <div className="balance-item-flex">
@@ -187,21 +230,14 @@ const AccountDetail = () => {
                     </div>
                     <div className="balance-label">Available plus credit</div>
                   </div>
-                  <div
-                    className="balance-routing-link"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setIsRoutingModalVisible(true);
-                    }}
-                  >
-                    <img
-                      src={infoIcon}
-                      alt="info"
-                      className="balance-info-icon"
-                    />
-                    <span>Account & routing number</span>
-                  </div>
                 </div>
+                <div
+                  style={{
+                    borderBottom: "2px solid #e0e0e0",
+                    width: "100%",
+                    marginTop: "20px",
+                  }}
+                ></div>
                 {/* 操作按钮 */}
                 <div className="action-buttons">
                   <div className="action-button-item">
@@ -411,7 +447,7 @@ const AccountDetail = () => {
       <Modal
         title="Full Account and Routing Number"
         open={isRoutingModalVisible}
-        style={{ top: 300 }}
+        style={{ top: 340 }}
         onCancel={() => setIsRoutingModalVisible(false)}
         closable={false}
         footer={[
@@ -425,7 +461,7 @@ const AccountDetail = () => {
           </Button>,
         ]}
         className="routing-modal"
-        width={800}
+        width="50%"
       >
         <div className="routing-modal-content">
           <div className="routing-info-item">

@@ -1,6 +1,7 @@
 .accounts-layout {
   min-height: 100vh;
   background: #f5f5f5;
+  padding-top: 108px;
 }
 
 /* 二级导航栏 */
@@ -9,7 +10,13 @@
   padding: 0;
   position: relative;
 }
+.arrow-icon-account {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  margin-left: 5px;
 
+}
 .secondary-nav::before {
   content: '';
   position: absolute;
@@ -85,8 +92,8 @@
 }
 
 .accounts-content-inner {
-  width: 85%;
-  max-width: 85%;
+  width: 80%;
+  max-width: 80%;
   margin: 0;
 }
 
@@ -421,6 +428,7 @@
 .action-button-primary {
   color: white !important;
   height: 30px !important;
+  width: 150px !important;
 
 }
 
@@ -429,7 +437,7 @@
   border-radius: 4px;
   font-weight: 500;
   font-size: 14px;
-  /* color: #055CB0; */
+  color: #055CB0;
 }
 
 .action-button.ant-btn-primary {
@@ -703,6 +711,7 @@
   gap: 12px;
   margin-top: 16px;
   justify-content: space-between;
+  
 }
 
 .offer-thumbnail {
@@ -718,6 +727,7 @@
   border: 1px solid #e8e8e8;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s, box-shadow 0.2s;
+  
 }
 
 .offer-thumbnail:hover {

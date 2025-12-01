@@ -4,6 +4,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-top: 60px;
 }
 
 .security-layout .ant-layout {
@@ -54,7 +55,7 @@ html.security-page {
 
 .security-body {
   height: 100%;
-  width: 83%;
+  width: 78%;
   margin: 0 auto;
   margin-top: 0 !important;
   padding-top: 0 !important;
@@ -138,8 +139,8 @@ html.security-page {
   padding-top: 0;
 }
 .sorter-img1 {
-  width: 10px;
-  height: 14px;
+  width: 12px;
+  height: 16px;
   margin-left: 4px;
 }
 
@@ -168,7 +169,7 @@ html.security-page {
 }
 
 .content-header {
-  margin-bottom: 32px;
+  margin-bottom: 10px;
 }
 
 .content-header-top {
@@ -199,6 +200,7 @@ html.security-page {
   line-height: 16.41px;
   color: rgb(102, 102, 102);
   vertical-align: top;
+  margin-top: 15px !important;
 }
 
 .new-message-button {
@@ -221,9 +223,9 @@ html.security-page {
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-opacity: 1;
-border-radius: 8px 8px 0px 0px;
-background: rgb(255, 255, 255);
+  opacity: 1;
+  border-radius: 8px 8px 0px 0px;
+  background: rgb(255, 255, 255);
 }
 
 .messages-table {
@@ -284,8 +286,8 @@ background: rgb(255, 255, 255);
   margin-left: 3px;
 }
 .sorter-img {
-  width: 16px;
-  height: 16px;
+  width: 22px;
+  height: 22px;
 }
 
 
@@ -303,8 +305,8 @@ background: rgb(255, 255, 255);
 }
 
 .unread-dot {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   background: #015fb8;
   border-radius: 50%;
   display: inline-block;

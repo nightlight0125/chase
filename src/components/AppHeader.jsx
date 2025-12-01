@@ -3,11 +3,10 @@ import {
   DownOutlined,
   MenuOutlined,
   QuestionCircleOutlined,
-  RightOutlined,
   SearchOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import { Button, Checkbox, Drawer, Input, Layout, Menu, Space } from "antd";
+import { Button, Drawer, Input, Layout, Menu, Space } from "antd";
 import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import justForYouImg from "../img/e1.png";
@@ -279,68 +278,70 @@ const AppHeader = () => {
     location.pathname === "/two-factor-authentication";
 
   return (
-    <div className="app-header-container">
-      {/* 顶部栏 */}
-      <div className="header-top">
-        <div className="header-top-inner">
-          <div className="header-left">
-            <MenuOutlined
-              className="menu-icon"
-              onClick={() => setIsMenuDrawerVisible(true)}
-            />
-            <img
-              src={logoImg}
-              alt="Chase Logo"
-              className="logo"
-              onClick={() => navigate("/")}
-              style={{ cursor: "pointer" }}
-            />
-          </div>
-          <div className="header-right">
-            <Space size="middle">
-              <SearchOutlined className="header-icon" />
-              <QuestionCircleOutlined className="header-icon" />
-              <UserOutlined className="header-icon" />
-              <Button type="primary" className="open-account-btn">
-                Open an account
-              </Button>
-              <a
-                href="#"
-                className="sign-out-link"
-                onClick={(e) => {
-                  e.preventDefault();
-                  if (isLoggedIn) {
-                    // 登出
-                    setIsLoggedIn(false);
-                  } else {
-                    // 显示登录弹框
-                    setIsLoginModalVisible(true);
-                  }
-                }}
-              >
-                {isLoggedIn ? "Sign out" : "Sign in"}
-              </a>
-            </Space>
+    <>
+      <div className="app-header-container">
+        {/* 顶部栏 */}
+        <div className="header-top">
+          <div className="header-top-inner">
+            <div className="header-left">
+              <MenuOutlined
+                className="menu-icon"
+                onClick={() => setIsMenuDrawerVisible(true)}
+              />
+              <img
+                src={logoImg}
+                alt="Chase Logo"
+                className="logo"
+                onClick={() => navigate("/")}
+                style={{ cursor: "pointer" }}
+              />
+            </div>
+            <div className="header-right">
+              <Space size="middle">
+                <SearchOutlined className="header-icon" />
+                <QuestionCircleOutlined className="header-icon" />
+                <UserOutlined className="header-icon" />
+                <Button type="primary" className="open-account-btn">
+                  Open an account
+                </Button>
+                <a
+                  href="#"
+                  className="sign-out-link"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if (isLoggedIn) {
+                      // 登出
+                      setIsLoggedIn(false);
+                    } else {
+                      // 显示登录弹框
+                      setIsLoginModalVisible(true);
+                    }
+                  }}
+                >
+                  {isLoggedIn ? "Sign out" : "Sign in"}
+                </a>
+              </Space>
+            </div>
           </div>
         </div>
+
+        {/* 导航菜单 */}
+        {!shouldHideNavMenu && (
+          <div className="header-nav">
+            <div className="header-nav-inner" ref={menuRef}>
+              <Menu
+                mode="horizontal"
+                selectedKeys={[current]}
+                onClick={onClick}
+                items={menuItems}
+                className="nav-menu"
+              />
+            </div>
+          </div>
+        )}
       </div>
 
-      {/* 导航菜单 */}
-      {!shouldHideNavMenu && (
-        <div className="header-nav">
-          <div className="header-nav-inner" ref={menuRef}>
-            <Menu
-              mode="horizontal"
-              selectedKeys={[current]}
-              onClick={onClick}
-              items={menuItems}
-              className="nav-menu"
-            />
-          </div>
-        </div>
-      )}
-
-      {/* 二级菜单 - 气泡菜单 */}
+      {/* 二级菜单 - 气泡菜单，不固定 */}
       {!shouldHideNavMenu &&
         subMenuItems[current] &&
         subMenuItems[current].length > 0 &&
@@ -359,7 +360,7 @@ const AppHeader = () => {
                     Payment activity
                   </div>
                   <div
-                    className={`statements-tab-item ${
+                    className={`statements-tab-item summary-tab ${
                       statementsTab === "summary" ? "active" : ""
                     }`}
                     onClick={() => setStatementsTab("summary")}
@@ -424,7 +425,7 @@ const AppHeader = () => {
         )}
 
       {/* 登录抽屉 */}
-      <Drawer
+      {/* <Drawer
         open={isLoginModalVisible}
         onClose={() => setIsLoginModalVisible(false)}
         placement="right"
@@ -435,7 +436,6 @@ const AppHeader = () => {
         className="login-drawer"
       >
         <div className="login-modal-content">
-          {/* 头部 */}
           <div className="login-modal-header">
             <CloseOutlined
               className="login-modal-close"
@@ -443,16 +443,14 @@ const AppHeader = () => {
             />
           </div>
           <h2
-            style={{ marginLeft: "24px", fontWeight: "500", fontSize: "18px" }}
+            style={{ marginLeft: "24px", fontWeight: "500", fontSize: "22px" }}
           >
             Manage your business accounts
           </h2>
 
-          {/* 主要内容 */}
           <div className="login-modal-body">
             <h2 className="login-welcome">Welcome back</h2>
 
-            {/* Username 输入 */}
             <div className="login-form-item">
               <label className="login-label">Username</label>
               <Input
@@ -466,7 +464,6 @@ const AppHeader = () => {
               <div className="login-input-underline"></div>
             </div>
 
-            {/* Password 输入 */}
             <div className="login-form-item">
               <label className="login-label">Password</label>
               <div className="login-password-wrapper">
@@ -493,7 +490,6 @@ const AppHeader = () => {
               <div className="login-input-underline"></div>
             </div>
 
-            {/* Remember me 和 Use token */}
             <div className="login-options">
               <Checkbox
                 checked={rememberMe}
@@ -507,7 +503,6 @@ const AppHeader = () => {
               </a>
             </div>
 
-            {/* Sign in 按钮 */}
             <Button
               type="primary"
               className="login-signin-button"
@@ -520,7 +515,6 @@ const AppHeader = () => {
               Sign in
             </Button>
 
-            {/* 帮助链接 */}
             <div className="login-help-links">
               <a href="#" className="login-help-link">
                 Forgot username/password? <RightOutlined />
@@ -531,7 +525,6 @@ const AppHeader = () => {
             </div>
           </div>
 
-          {/* 底部 */}
           <div className="login-modal-footer">
             <a
               href="#"
@@ -545,7 +538,7 @@ const AppHeader = () => {
             </a>
           </div>
         </div>
-      </Drawer>
+      </Drawer> */}
 
       {/* 菜单抽屉 */}
       <Drawer
@@ -572,10 +565,14 @@ const AppHeader = () => {
               const isActive = item.route
                 ? location.pathname === item.route
                 : false;
+              const isIndented =
+                item.key === "overview" || item.key === "customer-insights";
               return (
                 <div
                   key={item.key}
-                  className={`menu-drawer-item ${isActive ? "active" : ""}`}
+                  className={`menu-drawer-item ${isActive ? "active" : ""} ${
+                    isIndented ? "menu-drawer-item-indented" : ""
+                  }`}
                   onClick={() => handleDrawerMenuClick(item)}
                 >
                   {item.label}
@@ -637,7 +634,7 @@ const AppHeader = () => {
           </div>
         </div>
       </Drawer>
-    </div>
+    </>
   );
 };
 

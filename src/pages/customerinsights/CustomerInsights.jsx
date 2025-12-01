@@ -59,106 +59,126 @@ const CustomerInsights = () => {
           <div className="info-cards-grid">
             {/* What to have ready */}
             <div className="info-card">
-              <div className="info-card-header">
+              <div className="info-card-icon-wrapper">
                 <img
                   src={whatToHaveReadyImg}
                   alt="what to have ready"
                   className="info-card-icon"
                 />
-                <h3 className="info-card-title">What to have ready</h3>
               </div>
-              <div className="info-card-content">
-                <ul className="info-card-list">
-                  <li>Recipient's name</li>
-                  <li>Recipient account and routing numbers</li>
-                  <li>Recipient address</li>
-                  <li>Mobile device for verification</li>
-                </ul>
-                <a href="#" className="info-card-link">
-                  Learn more about what to have ready <span>&gt;</span>
-                </a>
+              <div className="info-card-content-wrapper">
+                <div className="info-card-header">
+                  <h3 className="info-card-title">What to have ready</h3>
+                </div>
+                <div className="info-card-content">
+                  <ul className="info-card-list">
+                    <li>Recipient's name</li>
+                    <li>Recipient account and routing numbers</li>
+                    <li>Recipient address</li>
+                    <li>Mobile device for verification</li>
+                  </ul>
+                  <a href="#" className="info-card-link">
+                    Learn more about what to have ready <span>&gt;</span>
+                  </a>
+                </div>
               </div>
             </div>
 
             {/* Delivery time */}
             <div className="info-card">
-              <div className="info-card-header">
+              <div className="info-card-icon-wrapper">
                 <img
                   src={deliveryTimeImg}
                   alt="delivery time"
-                  style={{ width: "20px", height: "20px" }}
+                  className="info-card-icon"
                 />
-                <h3 className="info-card-title">Delivery time</h3>
               </div>
-              <div className="info-card-content">
-                <p className="info-card-text">
-                  Most domestic wires arrive within 1 business day. You can
-                  check your status on the 'Payment activity' page.
-                </p>
-                <a href="#" className="info-card-link">
-                  Learn more about delivery time <span>&gt;</span>
-                </a>
+              <div className="info-card-content-wrapper">
+                <div className="info-card-header">
+                  <h3 className="info-card-title">Delivery time</h3>
+                </div>
+                <div className="info-card-content">
+                  <p className="info-card-text">
+                    Most domestic wires arrive within 1 business day. You can
+                    check your status on the 'Payment activity' page.
+                  </p>
+                  <a href="#" className="info-card-link">
+                    Learn more about delivery time <span>&gt;</span>
+                  </a>
+                </div>
               </div>
             </div>
 
             {/* Daily limit */}
             <div className="info-card">
-              <div className="info-card-header">
+              <div className="info-card-icon-wrapper">
                 <img
                   src={dailyLimitImg}
                   alt="daily limit"
                   className="info-card-icon"
                 />
-                <h3 className="info-card-title">Daily limit</h3>
               </div>
-              <div className="info-card-content">
-                <p className="info-card-text">
-                  Your daily online wire limit is $500,000. If you need to send
-                  more, visit any Chase branch.
-                </p>
+              <div className="info-card-content-wrapper">
+                <div className="info-card-header">
+                  <h3 className="info-card-title">Daily limit</h3>
+                </div>
+                <div className="info-card-content">
+                  <p className="info-card-text">
+                    Your daily online wire limit is $500,000. If you need to
+                    send more, visit any Chase branch.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Fees card - 根据选中的 tab 显示不同的内容 */}
             {activeTab === "domestic" ? (
               <div className="info-card">
-                <div className="info-card-header">
+                <div className="info-card-icon-wrapper">
                   <img
                     src={domesticFeesImg}
                     alt="domestic fees"
-                    style={{ width: "20px", height: "20px" }}
+                    className="info-card-icon"
                   />
-                  <h3 className="info-card-title">Domestic fees</h3>
                 </div>
-                <div className="info-card-content">
-                  <p className="info-card-text">
-                    When you enter your wire info, you'll see the applicable
-                    Chase wire transfer fee. Note, your recipient may have
-                    charges from their bank that could impact the amount they
-                    receive.
-                  </p>
-                  <a href="#" className="info-card-link">
-                    Ways to send money without fees <span>&gt;</span>
-                  </a>
+                <div className="info-card-content-wrapper">
+                  <div className="info-card-header">
+                    <h3 className="info-card-title">Domestic fees</h3>
+                  </div>
+                  <div className="info-card-content">
+                    <p className="info-card-text">
+                      When you enter your wire info, you'll see the applicable
+                      Chase wire transfer fee. Note, your recipient may have
+                      charges from their bank that could impact the amount they
+                      receive.
+                    </p>
+                    <a href="#" className="info-card-link">
+                      Ways to send money without fees <span>&gt;</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             ) : (
               <div className="info-card">
-                <div className="info-card-header">
+                <div className="info-card-icon-wrapper">
                   <img
                     src={domesticFeesImg}
                     alt="international fees"
-                    style={{ width: "20px", height: "20px" }}
+                    className="info-card-icon"
                   />
-                  <h3 className="info-card-title">International fees</h3>
                 </div>
-                <div className="info-card-content">
-                  <p className="info-card-text">
-                    When you enter your wire info, you'll see the applicable
-                    Chase wire transfer fee. Note your recipient may have
-                    charges from their bank that could impact the amount they
-                    receive.
-                  </p>
+                <div className="info-card-content-wrapper">
+                  <div className="info-card-header">
+                    <h3 className="info-card-title">International fees</h3>
+                  </div>
+                  <div className="info-card-content">
+                    <p className="info-card-text">
+                      When you enter your wire info, you'll see the applicable
+                      Chase wire transfer fee. Note your recipient may have
+                      charges from their bank that could impact the amount they
+                      receive.
+                    </p>
+                  </div>
                 </div>
               </div>
             )}
