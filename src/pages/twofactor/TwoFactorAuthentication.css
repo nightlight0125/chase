@@ -38,7 +38,7 @@
 
 .security-sidebar .sidebar-item {
   padding: 12px 10px;
-  color: #666;
+  color: #333;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s;
@@ -51,9 +51,9 @@
 }
 
 .security-sidebar .sidebar-item.active {
-  color: #015FB8;
+  color: #666;
   border-left-color: #015FB8;
-  font-weight: 500;
+  font-weight: bold !important;
 }
 
 /* 右侧内容区域 */

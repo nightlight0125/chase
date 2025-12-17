@@ -94,7 +94,7 @@ const Security = () => {
             <div className="security-content-inner">
               <div className="content-header">
                 <div>
-                  <h1 className="content-title">Inbox</h1>
+                  <h1 className="security-content-title">Inbox</h1>
                   <p className="content-description">
                     Your Secure Messages include the alerts, notifications and
                     inquiries you've received or sent within the last 90 days.

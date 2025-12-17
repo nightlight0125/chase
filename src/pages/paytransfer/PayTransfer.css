@@ -94,13 +94,13 @@
 
 .payment-card-title {
   font-size: 20px;
-  color: #666;
+  color: #999;
   margin: 0 0 8px 0;
 }
 
 .payment-card-desc {
   font-size: 16px;
-  color: #666;
+  color: #999;
   margin: 0 0 16px 0;
 }
 
@@ -136,7 +136,7 @@
   height: 60px;
   background: white;
   border: none;
-  border-top: 2px solid #999;
+  border-top: 1px solid #999;
   color: #015FB8;
   font-weight: 500;
   border-radius: 0;
@@ -178,14 +178,14 @@
 
 .wire-detail-label {
   font-size: 14px;
-  color: #333 !important;
+  color: #666 !important;
   min-width: 80px;
   flex-shrink: 0;
 }
 
 .wire-detail-value {
   font-size: 14px;
-  color: #333;
+  color: #666;
   font-weight: 600;
 }
 
@@ -199,7 +199,7 @@
   box-sizing: border-box;
   margin-top: auto; /* 置底 */
   flex-shrink: 0;
-  border-top: 1px solid #055CB0;
+  border-top: 1px solid #999;
 }
 
 .wire-button {
@@ -244,6 +244,7 @@
   align-items: center;
   gap: 8px;
   font-weight: 400;
+  font-size:18px;
 }
 
 .info-icon {
@@ -252,7 +253,7 @@
 }
 
 .track-payments-desc {
-  font-size: 14px;
+  font-size: 12px;
   color: #333 !important;
 }
 
@@ -276,11 +277,15 @@
   background: white;
   font-weight: 600;
   color: #333;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0 !important;
+  padding-bottom:5px !important;
+  font-size:12px;
 }
 
 .payment-records-table .ant-table-tbody > tr > td {
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0 !important;
+  padding-bottom:5px !important;
+  font-size:12px;
 }
 
 .payment-records-table .ant-table-tbody > tr:hover > td {

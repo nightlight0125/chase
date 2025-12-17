@@ -1,3 +1,9 @@
+import {
+  DollarOutlined,
+  HddOutlined,
+  HistoryOutlined,
+  WalletOutlined
+} from "@ant-design/icons";
 import { Button, Layout, Tabs } from "antd";
 import { useState } from "react";
 import AppHeader from "../../components/AppHeader";
@@ -60,11 +66,7 @@ const CustomerInsights = () => {
             {/* What to have ready */}
             <div className="info-card">
               <div className="info-card-icon-wrapper">
-                <img
-                  src={whatToHaveReadyImg}
-                  alt="what to have ready"
-                  className="info-card-icon"
-                />
+                <HddOutlined />
               </div>
               <div className="info-card-content-wrapper">
                 <div className="info-card-header">
@@ -87,11 +89,12 @@ const CustomerInsights = () => {
             {/* Delivery time */}
             <div className="info-card">
               <div className="info-card-icon-wrapper">
-                <img
+                {/* <img
                   src={deliveryTimeImg}
                   alt="delivery time"
                   className="info-card-icon"
-                />
+                /> */}
+                <HistoryOutlined />
               </div>
               <div className="info-card-content-wrapper">
                 <div className="info-card-header">
@@ -112,11 +115,12 @@ const CustomerInsights = () => {
             {/* Daily limit */}
             <div className="info-card">
               <div className="info-card-icon-wrapper">
-                <img
+                {/* <img
                   src={dailyLimitImg}
                   alt="daily limit"
                   className="info-card-icon"
-                />
+                /> */}
+                <WalletOutlined />
               </div>
               <div className="info-card-content-wrapper">
                 <div className="info-card-header">
@@ -125,7 +129,7 @@ const CustomerInsights = () => {
                 <div className="info-card-content">
                   <p className="info-card-text">
                     Your daily online wire limit is $500,000. If you need to
-                    send more, visit any Chase branch.
+                    send more, visit any <a href="#" className="info-card-link">Chase branch.</a>
                   </p>
                 </div>
               </div>
@@ -135,11 +139,13 @@ const CustomerInsights = () => {
             {activeTab === "domestic" ? (
               <div className="info-card">
                 <div className="info-card-icon-wrapper">
-                  <img
+                  {/* <img
                     src={domesticFeesImg}
                     alt="domestic fees"
                     className="info-card-icon"
-                  />
+                  /> */}
+                  
+                <DollarOutlined />
                 </div>
                 <div className="info-card-content-wrapper">
                   <div className="info-card-header">
@@ -161,11 +167,13 @@ const CustomerInsights = () => {
             ) : (
               <div className="info-card">
                 <div className="info-card-icon-wrapper">
-                  <img
+                  {/* <img
                     src={domesticFeesImg}
                     alt="international fees"
                     className="info-card-icon"
-                  />
+                  /> */}
+                  
+                  <DollarOutlined />
                 </div>
                 <div className="info-card-content-wrapper">
                   <div className="info-card-header">

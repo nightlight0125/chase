@@ -334,7 +334,7 @@
 
 .menu-drawer .ant-drawer-body {
   padding: 0;
-  background: #2c2c2c;
+  background: #35302d;
   height: 100%;
 }
 
@@ -403,6 +403,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  background-color: #35302d;
 }
 
 .menu-drawer-item:hover {

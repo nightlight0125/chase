@@ -152,7 +152,7 @@
 }
 
 .balance-amount-medium {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
   color: #000;
   margin-bottom: 8px;
@@ -172,7 +172,7 @@
 }
 
 .balance-label {
-  font-size: 12px;
+  font-size: 11px;
   color: #666;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -671,8 +671,9 @@
 }
 
 .transactions-table .ant-table-tbody > tr > td {
-  border-bottom: 1px solid #f0f0f0;
-  padding: 16px;
+  border-bottom: 1px solid #f0f0f0 !important;
+  padding: 16px !important;
+  line-height:15px !important;
 }
 
 .transactions-table .ant-table-tbody > tr:hover > td {
@@ -784,7 +785,9 @@
   width: 128px;
   height: 33px;
 }
-
+.ant-modal .ant-modal-content{
+  padding:10px !important;
+}
 /* 响应式设计 */
 @media (max-width: 1200px) {
   .account-detail-inner {

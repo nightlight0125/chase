@@ -181,10 +181,10 @@ html.security-page {
   gap: 16px;
 }
 
-.content-title {
+.security-content-title {
   font-size: 22px;
   font-weight: 400;
-  color: rgb(153, 153, 153) !important;
+  color: #b2b2b4 !important;
   margin: 0 0 8px 0;
 }
 
@@ -256,7 +256,7 @@ html.security-page {
   padding: 18px;
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 13px;
   color: balck;
 }
 
@@ -366,8 +366,8 @@ html.security-page {
     padding: 16px;
   }
 
-  .content-title {
-    font-size: 24px;
+  .security-content-title {
+    font- size: 24px;
   }
 
   .content-header {
