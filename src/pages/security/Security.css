@@ -245,7 +245,7 @@ html.security-page {
 
 .messages-table-row {
   display: flex;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 2px solid #e3e3e5;
 }
 
 .messages-table-row:hover {

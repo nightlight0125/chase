@@ -104,7 +104,7 @@
   flex-shrink: 0;
 }
 
-.balance-section-flex {
+.balance-sectionDetail-flex {
   display: flex;
   /* border-bottom: 2px solid #e0e0e0 !important; */
   padding-bottom: 21px;
@@ -142,14 +142,14 @@
   justify-content: flex-end;
   min-height: 80px;
 }
-
+/* 
 .balance-amount {
   font-size: 48px;
   font-weight: 600;
   color: #000;
   margin-bottom: 8px;
   line-height: 1.2;
-}
+} */
 
 .balance-amount-medium {
   font-size: 22px;
@@ -671,7 +671,7 @@
 }
 
 .transactions-table .ant-table-tbody > tr > td {
-  border-bottom: 1px solid #f0f0f0 !important;
+  border-bottom: 2px solid #e3e3e5 !important;
   padding: 16px !important;
   line-height:15px !important;
 }
@@ -779,7 +779,7 @@
 }
 
 .modal-close-button {
-  background: #005ebb;
+  background: #16305a;
   padding: 0 30px;
   font-weight: 500;
   width: 128px;

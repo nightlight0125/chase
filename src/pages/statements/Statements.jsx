@@ -375,7 +375,7 @@ const Statements = () => {
                     columns={wireColumns}
                     dataSource={wireRecords}
                     pagination={false}
-                    className="payment-tracker-table"
+                    className="payment-tracker-table payment-tracker-tableHeight"
                     size="small"
                   />
                   <div className="table-footer wire-activity-footer">

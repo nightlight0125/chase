@@ -130,11 +130,11 @@
 
 .info-card {
   width: calc(42% - 12px); /* 两个一行，减去一半的 gap */
-  min-height: 193px;
+  /* min-height: 193px; */
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -190,15 +190,15 @@
   font-size: 14px;
   color: black;
   font-weight: 500;
-  line-height: 1.6;
-  margin: 0 0 12px 0;
+  line-height: 1.4;
+  margin: 0 0 3px 0;
   flex: 1;
 }
 
 .info-card-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 6px 0;
+  margin: 0 0 2px 0;
   flex: 1;
 }
 
@@ -207,7 +207,7 @@
   line-height: 1.4;
   padding-left: 20px;
   position: relative;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   padding-top: 4px;
 }
 

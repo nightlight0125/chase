@@ -38,7 +38,7 @@
 
 .security-sidebar .sidebar-item {
   padding: 12px 10px;
-  color: #333;
+  color: #222;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s;
@@ -47,11 +47,11 @@
 
 .security-sidebar .sidebar-item:hover {
   background: #f8f9fa;
-  color: #333;
+  color: #222;
 }
 
 .security-sidebar .sidebar-item.active {
-  color: #666;
+  color: #333;
   border-left-color: #015FB8;
   font-weight: bold !important;
 }
@@ -330,7 +330,7 @@ margin-bottom: 20px;
 
 .email-content {
   margin: 0 0 16px 0;
-  color: #666;
+  color: #333;
   width: 98%;
   margin: 0 auto;
   margin-top: 15px !important;

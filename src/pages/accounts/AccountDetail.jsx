@@ -211,7 +211,7 @@ const AccountDetail = () => {
                     <span>Account & routing number</span>
                   </div>
                 </div>
-                <div className="balance-section-flex">
+                <div className="balance-sectionDetail-flex">
                   <div className="balance-item-flex">
                     <div className="balance-amount-medium balance-amount-medium-credit">
                       $85.00

@@ -301,7 +301,7 @@ const Accounts = () => {
                     />
                   </div>
                   <p className="sidebar-text">
-                    Your money in this month is 50 30 second read
+                    Your money in this month is 50<br/> 30 second read
                   </p>
                   <RightOutlined className="sidebar-arrow" />
                 </div>

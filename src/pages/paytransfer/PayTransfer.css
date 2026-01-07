@@ -277,13 +277,13 @@
   background: white;
   font-weight: 600;
   color: #333;
-  border-bottom: 1px solid #e0e0e0 !important;
+  border-bottom: 2px solid #e0e0e0 !important;
   padding-bottom:5px !important;
   font-size:12px;
 }
 
 .payment-records-table .ant-table-tbody > tr > td {
-  border-bottom: 1px solid #f0f0f0 !important;
+  border-bottom: 2px solid #e3e3e5 !important;
   padding-bottom:5px !important;
   font-size:12px;
 }
@@ -318,7 +318,7 @@
 .tasks-title {
   font-size: 20px;
   font-weight: 600;
-  color: #1a237e;
+  color: #000;
   margin: 0 0 16px 0;
 }
 
